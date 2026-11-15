@@ -1,0 +1,77 @@
+variable,etapa,significado,unidad,naturaleza,rol,qué resume,estado,% lleno,valores distintos,% lleno población SKP
+Material Salida,Identificador,ID del rollo; único por renglón,—,identificador,identificador,—,observado,100.0,149734,100.0
+Material Entrada,Identificador,ID del planchón de origen; único,—,identificador,identificador,—,observado,100.0,149734,100.0
+Fecha Inicio,Identificador,Inicio de laminación del rollo,fecha-hora,identificador,material/contexto,—,observado,100.0,149732,100.0
+Programa,Tren acabador,Programa de laminación (~64 rollos de corrido); probable campaña de rodillos de trabajo,—,identificador,material/contexto,—,inferido,100.0,1834,100.0
+Secuencia,Tren acabador,Posición planeada en el programa; corr. 0.92 con la posición cronológica pero coincide solo 3.6 %,—,identificador,material/contexto,—,por confirmar,100.0,118,100.0
+Cambio Rodillo Trabajo,Tren acabador,"'Cambio' en 78 % de los rollos, en rachas cortas: NO es reemplazo por rollo",—,identificador,material/contexto,—,por confirmar,100.0,2,100.0
+Usuario,Inspección,"10 usuarios, repartidos en todos los horarios; no es turno fijo",—,identificador,material/contexto,—,por confirmar,100.0,10,100.0
+Norma,Especificación,"Norma del producto (ASTM, SAE, GMW, TER…); 49 textos → 47 tras normalizar",—,consigna/especificación,especificación,—,observado,100.0,49,100.0
+Grado,Especificación,Grado dentro de la norma; Norma|Grado = producto en este trabajo,—,consigna/especificación,especificación,—,observado,96.4,513,96.7
+Subnorma,Especificación,Variante de la norma; 69 % vacía,—,consigna/especificación,especificación,—,observado,30.9,145,25.8
+Uso General,Especificación,"Aplicación final (automotriz, estructural…)",—,consigna/especificación,especificación,—,observado,100.0,88,100.0
+Cliente,Especificación,Cliente del pedido (232 en la población); se anonimiza en salidas,—,consigna/especificación,especificación,—,observado,100.0,442,100.0
+Orden,Especificación,Pedido; fija la consigna de enrollado en 99 % de los rollos,—,consigna/especificación,especificación,—,observado,100.0,45640,100.0
+PRO,Especificación,Código de producto/proceso; anidado en Norma|Grado; NO fija la consigna (52 %),—,consigna/especificación,especificación,—,por confirmar,100.0,1880,100.0
+PRAM,Especificación,Determina 100 % de Temp Enrollado Obj y 96 % de Temp Acabado Obj: identificador de la práctica térmica (la 'receta' del MC4),—,consigna/especificación,palanca,—,inferido,100.0,205,100.0
+Grado Planchón,Especificación,Grado de acero del planchón; cruza a Grado,—,consigna/especificación,especificación,—,observado,100.0,164,100.0
+Forma Final,Especificación,"Forma final del producto: CALIENTE-SKP, DECAPADO-SKP, FRIO…",—,consigna/especificación,especificación,—,observado,100.0,9,100.0
+Ruta Teórica,Especificación,"Líneas planeadas después del MC4; contiene SKP_PSQ para Skinpass Pesquería. Expresa intención, no recorrido real",—,consigna/especificación,especificación,—,observado,100.0,273,100.0
+Espesor Final,Especificación,Espesor meta del producto terminado; el objetivo del MC4 es 1.4–4 % mayor en rollos con Skinpass,mm,consigna/especificación,especificación,—,inferido,100.0,2417,100.0
+Superficie Obj.,Especificación,"Clase de superficie pedida (interna, semi-expuesta, expuesta)",—,consigna/especificación,especificación,—,observado,100.0,10,100.0
+Criticidad Temperatura Objetivo,Especificación,Clase de criticidad térmica (17 códigos); posible regla de tolerancia,—,consigna/especificación,especificación,—,por confirmar,100.0,17,100.0
+Espesor Objetivo,Especificación,Espesor objetivo del MC4,mm,consigna/especificación,especificación,—,observado,100.0,1317,100.0
+Espesor Mínimo,Especificación,Tolerancia inferior de espesor,mm,consigna/especificación,especificación,—,observado,100.0,2065,100.0
+Espesor Máximo,Especificación,Tolerancia superior de espesor,mm,consigna/especificación,especificación,—,observado,100.0,2061,100.0
+Ancho Objetivo,Especificación,Ancho objetivo,mm,consigna/especificación,especificación,—,observado,100.0,2083,100.0
+Temp Enrollado Obj,Mesa de enfriamiento,Temperatura objetivo de enrollado; 16 niveles; fijada por PRAM,°C,consigna/especificación,palanca,—,observado,96.0,21,100.0
+Temp Enrollado Min,Mesa de enfriamiento,Límite inferior de la banda de enrollado,°C,consigna/especificación,especificación,—,observado,96.0,22,100.0
+Temp Enrollado Max,Mesa de enfriamiento,Límite superior de la banda de enrollado,°C,consigna/especificación,especificación,—,observado,96.0,21,100.0
+Temp Acabado Obj,Tren acabador,Temperatura objetivo a la salida de F7,°C,consigna/especificación,palanca,—,observado,96.0,8,100.0
+% Elongación Mínimo,Skinpass,Elongación mínima del Skinpass: 100 % vacía,%,consigna/especificación,sin uso,—,observado,0.0,0,0.0
+% Elongación Máximo,Skinpass,Elongación máxima del Skinpass: 100 % vacía,%,consigna/especificación,sin uso,—,observado,0.0,0,0.0
+Espesor Mínimo SKP,Skinpass,100 % vacía,mm,consigna/especificación,sin uso,—,observado,0.0,0,0.0
+Línea Adelantada SKP,Skinpass,100 % vacía,—,consigna/especificación,sin uso,—,observado,0.0,0,0.0
+Colada,Planchón,Colada de acería (química común); 21 mil coladas,—,identificador,material/contexto,—,observado,100.0,21505,100.0
+Espesor Entrada Real,Planchón,Espesor del planchón,mm,medición,material/contexto,valor del planchón,observado,100.0,65,100.0
+Ancho Entrada Real,Planchón,Ancho del planchón,mm,medición,material/contexto,valor del planchón,observado,100.0,1029,100.0
+Largo Planchón,Planchón,Largo del planchón,mm,medición,material/contexto,valor del planchón,inferido,100.0,3584,100.0
+Horno,Horno,Horno 1 o 2; alterna en 93 % de los rollos y se reparte 50/50 dentro de producto,—,identificador,material/contexto,—,observado,100.0,2,100.0
+Tiempo Estancia,Horno,Tiempo del planchón en el horno; >1000 min en 0.9 % (paros),min,medición,respuesta,total del planchón,inferido,100.0,1447,100.0
+Temperatura Descarga Salida,Horno,Temperatura del planchón al salir del horno; 0 = centinela (0.8 %),°C,medición,respuesta,probable promedio,inferido,100.0,147,100.0
+SSP Utilizado,Desbaste,Uso de la prensa de reducción de ancho (Sizing Press),sí/no,consigna/especificación,palanca,—,inferido,99.6,2,99.6
+Canteo R1,Desbaste,Reducción de ancho (canteo) en R1,mm,medición,respuesta,probable promedio,por confirmar,99.7,47451,99.7
+Espesor Barra,Barra de transferencia,Espesor de la barra; continuo (23 mil valores): consigna calculada por el modelo de set-up o medición,mm,consigna/especificación,palanca,—,por confirmar,100.0,53868,100.0
+% Uso Cubierta Térmica,Barra de transferencia,"% de cubierta térmica usada (71 % en 100, 25 % en 0); el producto explica solo 7 %",%,consigna/especificación,palanca,—,inferido,99.7,214,99.7
+Tiempo Entre Salida R2 y Entrada F1,Barra de transferencia,Tiempo de tránsito de la barra,s,medición,respuesta,—,inferido,100.0,137,100.0
+Temp. F1,Tren acabador,Temperatura en la caja F1 (igual F2–F7),°C,medición,respuesta,por confirmar: promedio o valor de punta,por confirmar,99.7,87111,99.6
+Temp Acabado Real,Tren acabador,Temperatura real a la salida de F7,°C,medición,respuesta,por confirmar (la regla usa longitud fuera de banda),inferido,100.0,10872,100.0
+Tensión de Looper 1 [Mpa],Tren acabador,Tensión interestand en looper 1 (igual 2–6); 0 posible = looper inactivo,MPa,medición,respuesta,probable promedio,por confirmar,95.4,857,98.5
+Tiempo de Resp. de Looper 1 (min),Tren acabador,Tiempo de respuesta del looper; faltante asociado a MAL PERFIL (90 %),min (?),medición,respuesta,—,por confirmar,99.8,23,99.7
+topSpyOnH,Tren acabador,Patrón de sprays (cabeza); conversión numérica perdió el patrón,bits,medición,sin uso,—,observado,99.7,166,99.7
+Offset de Ancho Manual,Tren acabador,Ajuste manual de ancho del operador; ≠0 en 3.4 % de la población; varía por usuario,mm,consigna/especificación,palanca,—,inferido,99.7,49,99.7
+% Uso Modelo,Tren acabador,% de uso del modelo de set-up; falta 27 % sin relación con el dictamen; negativos imposibles,%,medición,material/contexto,—,por confirmar,72.6,2510,71.6
+Espesor,Tren acabador,Espesor medido del rollo,mm,medición,respuesta,promedio del cuerpo (por confirmar),inferido,100.0,5610,100.0
+Ancho,Tren acabador,Ancho medido,mm,medición,respuesta,promedio (por confirmar),inferido,100.0,63568,100.0
+Corona Salida,Tren acabador,Corona del perfil transversal a la salida (centro − orillas); mediana 61,µm (supuesto),medición,respuesta,por confirmar (promedio de cuerpo o punta),por confirmar,97.7,57205,97.6
+Acuñamiento Salida,Tren acabador,Cuña: diferencia de espesor entre orillas (lado operador − motor),µm (supuesto),medición,respuesta,por confirmar,por confirmar,97.6,61807,97.6
+Taper Medido,Tren acabador,Ahusamiento de ancho medido; Taper Teórico es 0 siempre,mm (?),medición,respuesta,—,por confirmar,96.8,302,96.7
+Espesor Punta,Tren acabador,100 % vacía,mm,medición,sin uso,—,observado,0.0,0,0.0
+Afectado Superposición,Tren acabador,1 en 55 % de los rollos; con Motivo (Espesor/Acero) en solo 10 %: posible transición respecto al rollo previo,—,etiqueta derivada,material/contexto,—,por confirmar,100.0,2,100.0
+Temp Enrollado Real,Enrollado,Temperatura real de enrollado; ~3.5 °C bajo el objetivo (mediana),°C,medición,respuesta,por confirmar (la regla usa longitud fuera de banda),inferido,100.0,76479,100.0
+Enrollador,Enrollado,Enrollador 1 o 2; alterna en 97 % de los rollos,—,identificador,material/contexto,—,observado,100.0,2,100.0
+Diam Salida,Enrollado,Diámetro exterior del rollo,mm,medición,respuesta,—,inferido,100.0,650,100.0
+Peso,Enrollado,Peso del rollo (se compara con Peso Mínimo/Máximo),kg,medición,respuesta,—,observado,100.0,2285,100.0
+Peso Báscula,Enrollado,0 en 94 %: rollo no pesado,kg,medición,sin uso,—,observado,99.7,2665,99.7
+Defecto (1),Inspección,Nombre del defecto (hasta 5 por rollo); 76 % de los registros son automáticos,—,etiqueta derivada,posterior al resultado,un registro por defecto,observado,88.5,57,96.1
+Registro Automatico (1),Inspección,"1 = registrado por el sistema (regla), 0 = inspector",0/1,etiqueta derivada,posterior al resultado,—,observado,88.5,2,96.1
+Observaciones (1),Inspección,"Texto: en automáticos contiene la regla aplicada ('descalibre dentro de tolerancia', 'longitud admitida'…)",texto,etiqueta derivada,posterior al resultado,—,observado,85.4,7726,94.6
+Linea Origen (1),Inspección,"Línea a la que se atribuye el defecto: MC4_PSQ, PROVEEDOR (inclusiones), IP",—,etiqueta derivada,posterior al resultado,—,observado,88.5,3,96.1
+Intensidad (1),Inspección,LEVE/MUY LEVE en 94 %; criterio no documentado,ordinal,etiqueta derivada,posterior al resultado,—,observado,85.0,4,94.2
+Ubicacion (1),Inspección,"Parte del rollo afectada (TODO, INICIO, FIN…)",—,etiqueta derivada,posterior al resultado,—,observado,87.7,7,95.6
+Mts Ini (1),Inspección,Metro inicial del defecto (76 % lleno),m,medición,posterior al resultado,—,inferido,76.9,1,90.3
+Dictamen,Inspección,ACEPTADO/RETENIDO; RETENIDO ⇔ algún defecto con dictamen RETENIDO (99.9 %),—,etiqueta derivada,posterior al resultado,—,observado,100.0,2,100.0
+Resolución,Inspección,"Subdivide el dictamen (CALIDAD DE PLANTA, SOBRE ORDEN…)",—,etiqueta derivada,posterior al resultado,—,observado,100.0,5,100.0
+Calidad Sugerida,Inspección,Solo para RETENIDO: REPROCESO o PRIMERA OTRA ORDEN,—,etiqueta derivada,posterior al resultado,—,observado,50.1,2,58.9
+Envío a Inspección,Inspección,Sin inspección / automático / operador,—,etiqueta derivada,posterior al resultado,—,observado,100.0,3,100.0
+Orden Reasignada,Inspección,Pedido reasignado (consecuencia del dictamen),sí/no,etiqueta derivada,posterior al resultado,—,inferido,100.0,2,100.0

@@ -1,0 +1,30 @@
+# --- Datos de Ternium: NUNCA al repositorio ---
+data/
+data_molino_prev/
+skp_data/
+docs/
+outputs/cache/
+*.xlsx
+*.xls
+*.xlsm
+*.parquet
+*.feather
+*.pkl
+*.h5
+*.csv
+# Excepción: tablas agregadas que sí documentamos (sin datos por rollo)
+!outputs/tablas/*.csv
+
+# --- Entorno ---
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Sistema / editores ---
+.DS_Store
+.vscode/
+.idea/
+CLAUDE.md
