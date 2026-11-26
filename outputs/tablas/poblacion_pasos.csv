@@ -1,0 +1,7 @@
+paso,criterio,rollos,excluidos en el paso,programas del Skinpass
+0,Rollos MC4 2025,149734,,
+1,Ruta Teórica contiene SKP_PSQ (cualquier forma final),50016,99718.0,
+2,Tiene registro en el Skinpass 2025,47410,2606.0,858.0
+3,Fecha Inicio MC4 < 2025-12-01 (censura de fin de año),44313,3097.0,831.0
+4,Con bending real y preset (resultado Y definido),44272,41.0,831.0
+5,Además con corona relativa válida (asociación 8.C),43208,1064.0,831.0
