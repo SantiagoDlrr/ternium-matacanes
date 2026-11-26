@@ -1,0 +1,74 @@
+\section{Introducción}
+\label{sec:intro}
+
+\paragraph{Contexto industrial}
+La lámina de acero plano que llega a un cliente automotriz, de electrodomésticos o de construcción pasa por una
+cadena de procesos en la que cada etapa hereda la geometría y el estado mecánico que deja la anterior. En la planta
+de Pesquería de Ternium, el primer eslabón de esa cadena para el producto laminado es el \emph{Molino Caliente~4}
+(MC4): un planchón recalentado se desbasta y pasa por un tren acabador de siete castillos hasta convertirse en una
+banda de pocos milímetros (espesor mediano de \EspesorMediano{}~mm en los rollos de este estudio), que se enfría en la
+mesa de salida y se enrolla. La banda no sale perfectamente plana ni de espesor uniforme a lo ancho: suele ser más
+gruesa al centro que en las orillas (\emph{corona}) y puede ser más gruesa de un lado que del otro (\emph{cuña}). El
+espesor y la corona son los indicadores de desempeño más críticos de la laminación en caliente~\cite{peng2014}.
+
+Varios días después (\DesfaseMedianoH{}~h de mediana en nuestros datos), una parte de esos rollos pasa por el
+\emph{Skinpass} de Pesquería, una laminación de temple: una pasada en frío con una reducción muy pequeña, del orden
+de 1\,\%~\cite{kijima2008}, y con tensión aplicada. Su propósito es suprimir el punto de cedencia discontinuo que
+produce las bandas de Lüders en el conformado posterior, dar el acabado superficial y corregir la forma de la
+lámina~\cite{lenard2014}. Para lo último, la palanca principal es el \emph{bending}: la fuerza que dobla los rodillos de
+trabajo y cambia el perfil del claro entre ellos y, con ello, cuánto se alarga cada fibra de la lámina a lo ancho. Si
+las fibras se alargan de manera desigual quedan esfuerzos residuales que se manifiestan como ondas de orilla o
+pandeo central. Por eso la laminación de temple puede corregir una planeza no uniforme que trae el material, pero
+también puede revelarla o crearla, y la planeza no uniforme de entrada es una de sus dificultades
+reconocidas~\cite{lenard2014}. En la línea estudiada, cada rollo recibe un valor de bending de receta (\emph{preset})
+y un lazo de control lo ajusta durante el proceso.
+
+\paragraph{La decisión de Ternium}
+Según el Socio Formador, hoy el Skinpass trabaja con una configuración por tipo de material (caliente, decapado o frío) aplicada a todos los
+productos de esa familia. La receta única simplifica la operación, pero supone que productos distintos responden de
+forma parecida a la misma configuración. Ternium preguntó qué combinación de parámetros del Skinpass se asocia con la
+mejor calidad para cada producto y condición de entrada, para decidir si conviene diferenciar recetas por producto.
+La decisión es real y tiene un costo: cada receta adicional se diseña, se valida y se mantiene. Contestarla con
+historia de planta exige más que mostrar que los productos llegan distinto: exige saber qué pasaría con un producto si
+se le cambiara la receta, una predicción contrafactual y no una descripción~\cite{hernan2019}, y mostrar que productos
+distintos responden distinto a la misma receta (una interacción), no solo que parten de niveles distintos.
+
+\paragraph{El giro como hallazgo}
+Nuestra primera entrega encontró que esa pregunta, tal como está planteada, no puede contestarse con los registros
+que existen, y documentar por qué fue el primer resultado del proyecto. Los 24 archivos iniciales describían el MC4,
+no el Skinpass (sus cinco columnas del Skinpass venían vacías). Al obtener los resúmenes por rollo del Skinpass de
+2025 y ligarlos con el MC4 aparecieron los otros dos obstáculos: el Skinpass no registra planeza de salida, de modo
+que no hay un resultado de calidad de forma contra el cual comparar configuraciones, y el bending real no es una
+palanca libre, sino la respuesta de un lazo cerrado a la forma de la lámina. Muchos proyectos industriales de
+analítica fallan precisamente por no reconocer esa brecha entre la pregunta y los datos y por optimizar un modelo
+predictivo como si sus coeficientes fueran efectos~\cite{box1966,shmueli2010}.
+
+Lo que sí registran los datos es cuánto tuvo que corregir el lazo sobre la receta: la diferencia entre el bending
+real y el preset, que llamamos $\Y$. Si la receta anticipara lo que el rollo necesita, $\Y$ sería cero. La pregunta
+respondible que sigue importando para la decisión es, entonces:
+\emph{en los rollos que el MC4 envió al Skinpass de Pesquería en 2025, ¿qué tanto depende la corrección de bending
+de lo que se sabe antes de procesarlos ---su producto, su dimensión, el programa del Skinpass y la corona relativa
+con que salen del MC4--- y cuál de esas fuentes pesa más?} Aquí, el \emph{programa} es la tanda de rollos que el
+Skinpass procesa de corrido (con mediana de \MedianaRollosPrograma{} rollos), y la \emph{corona relativa} es la corona
+dividida entre el espesor, en puntos porcentuales (pp). Si la corrección depende sobre todo del producto, una receta
+por producto podría absorberla; si depende de otra cosa, diferenciar por producto no la absorbería.
+
+\paragraph{Contribuciones}
+Cada una se verifica en la sección~\ref{sec:resultados}:
+\begin{enumerate}
+\item Una unión verificada, rollo por rollo, entre el MC4 y el Skinpass de un año de producción
+      (\NRollosAnalitica{} rollos en \NProgramas{} programas), con la población documentada paso a paso y las
+      exclusiones comparadas contra los incluidos.
+\item Una descomposición de la corrección de bending contra el azar: el programa del Skinpass explica
+      \ExcesoPrograma{}\,\% de su variación por encima de lo que daría el azar, frente a \ExcesoProducto{}\,\% del producto
+      y \ExcesoDimension{}\,\% de la dimensión; agrupar por día da casi lo mismo que por programa.
+\item Una asociación ajustada entre la corona relativa del MC4 y la corrección, con el signo físico esperado pero
+      pequeña (\PendCorona{}~kN por punto porcentual) y frágil ante confusión no medida, sometida a un control negativo,
+      a \NVariantes{} alternativas de depuración y agrupación y a un análisis de sensibilidad.
+\item Una evaluación predictiva honesta: con validación por programa y temporal, la información previa al Skinpass no
+      anticipa la corrección claramente mejor que una receta por producto y dimensión.
+\item Una propuesta de experimento evolutivo por programa, con su volumen estimado, y la lista de datos del Skinpass
+      que harían respondible la pregunta original.
+\end{enumerate}
+Mostramos que la corrección que el lazo de bending aplica sobre la receta depende más del programa del Skinpass, y del
+periodo en que se procesa el rollo, que del producto, y que la condición de salida del MC4 apenas la anticipa.
