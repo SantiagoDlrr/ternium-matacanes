@@ -2,8 +2,9 @@
 data/
 data_molino_prev/
 skp_data/
-docs/
+docs/*
 outputs/cache/
+ResumenProduccionSKP/
 *.xlsx
 *.xls
 *.xlsm
@@ -14,6 +15,7 @@ outputs/cache/
 *.csv
 # Excepción: tablas agregadas que sí documentamos (sin datos por rollo)
 !outputs/tablas/*.csv
+!docs/plan_de_analisis.md
 
 # --- Entorno ---
 .venv/
