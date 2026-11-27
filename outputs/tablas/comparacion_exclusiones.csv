@@ -1,0 +1,9 @@
+paso,grupo,rollos,espesor objetivo mediano (mm),ancho objetivo mediano (mm),corona relativa mediana (%),% DECAPADO,% FRIO,% RETENIDO en MC4,Y mediana (kN),productos distintos
+2,incluidos,47410,3.06,1229.0,2.08,61.19,1.5,58.5,-45.0,333
+2,excluidos,2606,2.96,1229.0,2.18,57.41,0.92,64.66,,166
+3,incluidos,44313,3.06,1229.0,2.04,61.38,1.44,57.12,-45.0,331
+3,excluidos,3097,2.94,1232.0,3.42,58.41,2.39,78.14,-33.0,165
+4,incluidos,44272,3.06,1229.0,2.04,61.39,1.44,57.12,-45.0,331
+4,excluidos,41,3.12,1228.0,2.15,56.1,0.0,65.85,,28
+5,incluidos,43208,3.06,1229.0,2.04,61.42,1.44,56.11,-45.0,330
+5,excluidos,1064,3.06,1229.0,,59.87,1.41,97.84,-48.0,144

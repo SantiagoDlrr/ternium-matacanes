@@ -1,0 +1,76 @@
+%% Artículo final · Reto Ternium · Equipo Matacanes
+%% Plantilla: elsarticle (Elsevier), formato de doble columna (5p) para Journal of Manufacturing Systems.
+%% Compilar con pdfLaTeX + BibTeX (latexmk -pdf main.tex). Las cifras salen de generado/cifras.tex,
+%% que regenera `python -m src.reproducir`; no se escriben números de resultados a mano en el texto.
+\documentclass[5p,times,twocolumn]{elsarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{dblfloatfix}   % permite floats de doble columna abajo de la página ([b])
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{microtype}
+
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}  % signo menos tipográfico de las cifras generadas
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\Y}{\ensuremath{Y}}
+\newcommand{\pp}{\,pp}
+\renewcommand{\arraystretch}{1.08}
+% Floats de doble columna arriba o abajo de la página, nunca a media página (observación E1-02)
+\renewcommand{\dbltopfraction}{0.85}
+\renewcommand{\dblfloatpagefraction}{0.8}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{dbltopnumber}{3}
+\setlength{\tabcolsep}{4pt}
+
+\input{generado/cifras.tex}
+
+\journal{Journal of Manufacturing Systems}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{La corrección de bending del Skinpass depende más del programa que del producto: evidencia de un año
+de rollos ligados entre la laminación en caliente y la laminación de temple}
+
+%% La Entrega I se firmó como "Grupo Matacanes". Si el profesor pide nombres, agregar un \author por integrante.
+\author{Equipo Matacanes}
+\affiliation{organization={Tecnológico de Monterrey, Escuela de Ingeniería y Ciencias},
+             city={Monterrey}, state={Nuevo León}, country={México}}
+
+\input{secciones/00_resumen}
+
+\end{frontmatter}
+
+\input{secciones/01_introduccion}
+\input{secciones/02_literatura}
+\input{secciones/03_metodologia}
+\input{secciones/04_resultados}
+\input{secciones/05_discusion}
+\input{secciones/06_conclusiones}
+
+\section*{Disponibilidad de datos y código}
+Los datos pertenecen a Ternium y están bajo acuerdo de confidencialidad. El código, el plan de análisis con su
+bitácora, las tablas agregadas y la tabla completa de \NContrastes{} contrastes examinados están en el repositorio
+del equipo; un solo comando (\texttt{python -m src.reproducir}) regenera todas las figuras, tablas y cifras de este
+artículo a partir de los 36 archivos originales.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{referencias}
+
+\onecolumn
+\appendix
+\input{secciones/07_anexos}
+
+\end{document}

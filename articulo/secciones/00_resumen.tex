@@ -1,0 +1,23 @@
+\begin{abstract}
+La laminación de temple (Skinpass) corrige la forma de la lámina laminada en caliente con un lazo de control de
+bending que ajusta sobre una receta fija por tipo de material, y Ternium busca evidencia para decidir si conviene
+diferenciar recetas por producto. Ligamos, rollo por rollo, un año de registros del Molino Caliente~4 y del Skinpass de
+Pesquería (\NRollosAnalitica{} rollos en \NProgramas{} programas) y preguntamos qué tanto de la corrección que aplica el
+lazo, el bending real menos el preset, se explica por el producto, la dimensión, el programa del Skinpass y la corona
+relativa de salida del molino caliente. En una descomposición anidada contrastada con permutaciones, el programa explica
+\ExcesoPrograma{} puntos porcentuales de la variación por encima del azar (IC~95\,\% \ExcesoProgramaIC), contra
+\ExcesoProducto{} \ExcesoProductoIC{} del producto, y agrupar por día da casi lo mismo. Dentro de producto, dimensión y
+mes, cada punto porcentual de corona relativa se asocia con una corrección \PendCorona~kN más negativa (IC~95\,\%
+\PendCoronaIC), con el signo físico esperado, un control negativo nulo y la misma dirección en \NVariantes{}
+alternativas de depuración y agrupación; pero el efecto es pequeño y un confusor no medido con 1/\CHUnoEntre{} de la fuerza del
+producto lo anularía. Con validación agrupada por programa y temporal, un modelo de gradient boosting no anticipa la
+corrección claramente mejor que la media por producto y dimensión. Recentrar el preset con la corrección histórica
+bajaría su magnitud unos \ExpDeltaA~kN, y diferenciarlo por producto agregaría solo \ExpDeltaDif~kN. Antes de
+diferenciar recetas, proponemos una operación evolutiva rollo a rollo dentro de cada programa (\ExpTodoARollos{}
+rollos, unas \ExpTodoASemRollo{} semanas de producción) y el registro de la planeza de salida, que hoy no se mide.
+\end{abstract}
+
+\begin{keyword}
+laminación de temple \sep Skinpass \sep bending \sep corona \sep datos observacionales \sep descomposición de la
+varianza \sep operación evolutiva
+\end{keyword}

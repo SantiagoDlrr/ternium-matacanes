@@ -1,0 +1,115 @@
+\section{Discusión}
+\label{sec:discusion}
+
+Organizamos la discusión en cuatro hallazgos. Para cada uno decimos qué encontramos, qué implica para la decisión de
+Ternium, qué no implica y qué dato o experimento cerraría la brecha. Los cuatro viven en los dos primeros peldaños de
+la escalera de afirmaciones: \emph{observamos} y \emph{se asocia, ajustando por}.
+
+\subsection{H1. La corrección depende más del programa, o del periodo, que del producto}
+\emph{Qué encontramos.} Por encima del azar, el programa del Skinpass explica \ExcesoPrograma~puntos de la variación de
+la corrección de bending \ExcesoProgramaIC, el producto \ExcesoProducto{} \ExcesoProductoIC{} y la dimensión
+\ExcesoDimension; el predominio del programa se mantiene si entra antes que el producto y en las \NVariantes{}
+alternativas de depuración y agrupación y agrupación. Agrupar por día da casi lo mismo que por programa (\VCuatroExcesoDia{} puntos).
+
+\emph{Qué implica.} Una receta por producto podría absorber, como máximo, la parte sistemática de la corrección que
+viaja con el producto: \ExcesoProducto{} puntos de su suma de cuadrados por encima del azar (\ExcesoProdDim{} con la
+dimensión). La parte más grande cambia de un programa a otro o de un día a otro, y ninguna receta por producto la
+absorbería. Para decidir, lo que más pesa es qué cambia entre programas: el rodillo de trabajo, el operador, la mezcla
+de pedidos del periodo o el estado de los medidores.
+
+\emph{Qué no implica.} No implica que el programa cause la corrección: con estos datos, el programa y el día son casi
+indistinguibles, por lo que escribimos ``programa o periodo''. Tampoco implica que los productos respondan distinto a la
+receta. Que un producto necesite en promedio una corrección distinta es una diferencia de \emph{nivel}; que necesite
+una receta distinta exige una diferencia de \emph{respuesta}, es decir, que el mismo cambio de receta tenga efectos
+distintos en productos distintos, y eso no se observa en datos donde la receta casi no varía dentro de producto. Por
+último, no implica que reducir la corrección mejore la calidad: el Skinpass no registra planeza de salida.
+
+\emph{Qué lo cerraría.} El registro, por rollo, de la campaña de rodillos de trabajo (hoy solo el identificador del
+rodillo), de los cambios de receta con su fecha de vigencia y de los ajustes manuales del operador con su motivo
+permitiría separar el programa del periodo. El experimento de la sección~\ref{sec:experimento} bloquea ese efecto en
+lugar de estimarlo.
+
+\subsection{H2. La corona del MC4 se asocia con la corrección, pero poco y de forma frágil}
+\emph{Qué encontramos.} Dentro de producto, dimensión y mes, un punto porcentual más de corona relativa se asocia con
+una corrección \PendCorona~kN más negativa \PendCoronaIC, con el signo que predice el argumento mecánico. El control
+negativo no responde, la dirección sobrevive a \NVariantes{} alternativas y el preset no reacciona a la corona. Pero el
+efecto es pequeño: del percentil 10 al 90 de la corona la corrección cambia \VDosCambio~kN, frente a una desviación
+estándar de \YDEAsoc~kN. Además es frágil: un confusor no medido con 1/\CHUnoEntre{} de la fuerza del producto bastaría
+para anularlo.
+
+\emph{Qué implica.} La forma con que el rollo sale del MC4 lleva poca información útil para fijar el preset del
+Skinpass. Ajustar el preset por la corona movería la corrección unos pocos kN, una fracción pequeña del trabajo que
+hoy hace el lazo (\ExpAbsY~kN de $|\Y|$ promedio).
+
+\emph{Qué no implica.} No es un efecto causal, y la fragilidad lo impide aún más que de costumbre: la planeza de
+entrada y el estado de los rodillos del MC4 influyen tanto en la corona como en lo que el lazo necesita corregir. Tampoco
+implica que la corona no importe para la planeza final: el lazo compensa la forma de entrada, y lo que medimos es cuánto
+la compensó, no si la compensación fue suficiente.
+
+\emph{Qué lo cerraría.} Una medición de planeza a la entrada del Skinpass, que hoy no existe, convertiría a la principal
+variable no medida del diagrama en una variable observada.
+
+\subsection{H3. No se detectan diferencias de respuesta entre productos}
+\emph{Qué encontramos.} De los \NProdHet{} productos con al menos 300 rollos, \NProdNeg{} tienen una pendiente
+corona~$\rightarrow$~$\Y$ negativa como la global, pero ninguno se distingue de cero tras controlar la tasa de
+descubrimientos falsos y los intervalos se traslapan ampliamente.
+
+\emph{Qué implica.} Con estos datos no hay evidencia de que algún producto reaccione a la forma de entrada de manera
+distinta a los demás. Es la única forma de interacción que podemos estimar, y no aparece.
+
+\emph{Qué no implica.} No demuestra que los productos respondan igual: con intervalos de este ancho, la ausencia de
+evidencia no es evidencia de equivalencia, que exigiría fijar un margen de equivalencia de antemano~\cite{wellek2010}.
+Los productos de los extremos de la Fig.~\ref{fig:productos} son los peores candidatos para una receta especial: con
+\NProdHet{} comparaciones, el más extremo sobrestima su efecto por la maldición del optimizador~\cite{smith2006}.
+
+\emph{Qué lo cerraría.} Variación deliberada del preset dentro de producto, que solo puede venir de un experimento.
+
+\subsection{H4. La información previa al Skinpass no anticipa la corrección mejor que una receta por producto}
+\emph{Qué encontramos.} El modelo de gradient boosting baja el error absoluto medio \PredMAEDifGrupo~kN respecto a la
+media por producto y dimensión en la validación agrupada, pero es peor en la temporal, y los dos explican menos del
+10\,\% de la variación fuera de muestra. Lo que el modelo usa es, sobre todo, el producto. Recentrar el preset con la
+mediana histórica bajaría $|\Y|$ unos \ExpDeltaA~kN; casi todo eso (\ExpDeltaGlobal~kN) se logra con una sola mediana
+global, y diferenciar por producto agregaría \ExpDeltaDif~kN.
+
+\emph{Qué implica.} Optimizar el preset con un modelo más flexible sobre la información previa al Skinpass agregaría muy
+poco a una receta por producto, y una receta por producto agregaría muy poco a recentrar la receta única. Lo que sí
+sugieren los datos es que la receta vigente está desplazada (la corrección mediana es de \YMediana~kN), y esa es una
+hipótesis operativa que vale la pena probar.
+
+\emph{Qué no implica.} No implica que la corrección sea impredecible con otros datos; el modelo no conoce la planeza de
+entrada ni el estado de los rodillos. Tampoco implica que un preset recentrado mejore la calidad: el lazo corrige de
+todos modos, y la ganancia, si la hay, estaría en el tramo de cabeza del rollo, antes de que el lazo converja. Los datos
+resumidos por rollo no separan ese tramo.
+
+\emph{Qué lo cerraría.} El experimento de la sección~\ref{sec:experimento}, con planeza de salida medida durante su
+ejecución.
+
+\subsection{Relación con la literatura}
+Los resultados coinciden con la advertencia de Box~\cite{box1966}: las variables latentes del proceso, aquí resumidas
+en el programa o el periodo, pesan más que las variables observadas que solemos poner en un modelo, y la asociación de
+la corona sería la conclusión equivocada de un análisis que no la sometiera a sensibilidad. También coinciden con la
+física del temple~\cite{lenard2014} en que la forma de entrada importa (el signo de la asociación es el esperado),
+pero matizan su alcance práctico: en una planta con un lazo de planeza, esa forma deja una huella pequeña en la
+corrección. Y chocan con la expectativa, común en la literatura de aprendizaje automático en manufactura~\cite{wuest2016},
+de que un modelo más flexible extraerá de los datos de proceso lo que una regla simple no ve: con validación por
+programa y por tiempo, la ventaja casi desaparece, como advierten Roberts et al.~\cite{roberts2017}.
+
+\subsection{Limitaciones, escritas como hallazgos}
+\begin{itemize}
+\item \emph{Sin resultado de forma.} El Skinpass no registra planeza. Sus defectos de inspector afectan al
+      \PctDefInspector\,\% de los rollos y el \PctTensionEnrollado\,\% de esos registros son de tensión de enrollado, no
+      de forma; por eso no pudimos usar la calidad de forma como resultado.
+\item \emph{Censura de fin de año.} Solo \PctDicEnSKP\,\% de los rollos de diciembre llega al Skinpass de 2025, y los de
+      diciembre traen más corona (\CoronaRelMedianaDic\,\% contra \CoronaRelMediana\,\%). Sin el corte, la pendiente se
+      acerca a cero y su intervalo lo incluye.
+\item \emph{La receta no es tan única.} El preset es único en el \PctPresetUnicoTodos\,\% de los grupos programa
+      $\times$ producto $\times$ dimensión, pero solo en el \PctPresetUnicoDos\,\% de los que tienen dos o más rollos;
+      \PctPresetCero\,\% de los rollos tiene preset cero y \NPresetAlto{} rollos tienen un preset mayor que el máximo
+      bending real observado. Las unidades del preset son un supuesto (Anexo~\ref{sec:anexo-supuestos}).
+\item \emph{Programa y periodo, indistinguibles.} El día explica \VCuatroExcesoDia{} puntos contra
+      \VCuatroExcesoProg{} del programa.
+\item \emph{Confusión fuerte por pedido.} El producto explica \CHRDRef\,\% de la varianza de la corona dentro de
+      dimensión y mes; cualquier confusor parecido, aunque mucho más débil, cambiaría la conclusión sobre la corona.
+\item \emph{Un año, una planta, un resumen por rollo.} No sabemos qué resume cada valor (promedio, punta u otro) ni
+      separamos el enhebrado del tramo estable.
+\end{itemize}

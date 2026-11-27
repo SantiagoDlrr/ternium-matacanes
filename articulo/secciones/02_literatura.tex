@@ -1,0 +1,87 @@
+\section{Revisión de literatura}
+\label{sec:literatura}
+
+\subsection{Perfil y planeza: lo que la laminación en caliente le entrega al Skinpass}
+En la laminación en caliente, el espesor y la corona son los indicadores de calidad que más pesan en la
+rentabilidad~\cite{peng2014}, y la literatura de procesos los trata como resultados que el molino debe controlar. La
+planeza, en cambio, depende de la distribución de alargamientos a lo ancho: una banda cuya corona no guarda
+proporción con la del claro entre rodillos se alarga de manera desigual y acumula esfuerzos residuales que más tarde
+aparecen como ondas o pandeo, y la planeza no uniforme con que llega la banda es una dificultad reconocida de la
+laminación de temple~\cite{lenard2014}. Esa es la conexión física que motiva este trabajo: la corona con que
+sale el rollo del MC4 debería importar para el Skinpass, porque fija cuánta elongación diferencial tendría que
+compensar la pasada de temple. Pero en una planta la corona no es una variable libre. Depende del pedido (espesor y
+ancho objetivo, grado), del estado de los rodillos del molino y del periodo de producción, de modo que cualquier
+comparación entre rollos con distinta corona compara también pedidos y momentos distintos. La literatura de
+laminación explica el mecanismo; no dice cuánto de ese mecanismo sobrevive a la mezcla de pedidos de un año real.
+
+\subsection{La laminación de temple}
+Los modelos de la laminación de temple coinciden en que es un proceso difícil de describir con la teoría clásica de
+laminación plana. Con reducciones tan pequeñas, las regiones elástica y plástica de la banda son comparables, el
+aplanamiento de los rodillos de trabajo domina las fuerzas y la reducción es del mismo orden que la rugosidad
+superficial; por eso los modelos tradicionales predicen mal las fuerzas de separación y deben incorporar la
+deformación del rodillo y fricción alta~\cite{lenard2014}. Kijima y Bay~\cite{kijima2008} ilustran la escala del
+problema: con simulaciones de elementos finitos de una indentación plana, estudian cómo se transfiere la rugosidad del
+rodillo a la lámina y cuánto se alarga ésta bajo carga normal pura, en un régimen de fricción seca y deformación muy
+inhomogénea. Otros modelos tratan el molino de temple como un sistema de control de múltiples entradas y salidas, con
+las tensiones, la fuerza y la velocidad como variables acopladas~\cite{lenard2014}. En conjunto, esta literatura
+explica qué pasa dentro de una pasada y cómo controlarla; su unidad es el contacto rodillo--lámina o la línea en
+estado estable, no la población de rollos de una planta. No responde, ni pretende hacerlo, cuánto difiere entre
+productos la corrección que necesita el Skinpass cuando opera con una sola receta.
+
+\subsection{Datos de proceso y datos de ocasión}
+Los registros de planta son datos que nadie diseñó para contestar preguntas causales. Box~\cite{box1966} lo advirtió
+para la regresión con datos no planeados: el término de error contiene variables latentes que cambian junto con las
+variables observadas, y el coeficiente estimado mezcla el efecto buscado con el de esas variables; para saber qué
+pasa cuando se interviene un sistema hay que intervenirlo. La literatura de monitoreo basado en datos en laminación
+en caliente aprovecha bien esos registros para vigilar indicadores~\cite{peng2014}, porque su objetivo es detectar
+desviaciones, no estimar qué pasaría con otra configuración. Hernán, Hsu y Healy~\cite{hernan2019} ordenan esta
+distinción en tres tareas: describir, predecir y predecir contrafactuales; solo la tercera contesta "¿qué pasaría si
+cambiamos la receta?", y exige supuestos que los datos de ocasión rara vez cumplen. Nuestra pregunta se ubica a
+propósito en las dos primeras.
+
+\subsection{Inferencia con datos observacionales}
+Cuando se quiere ir más allá de la descripción, la literatura de inferencia observacional pide tres cosas. Primero,
+comparar unidades comparables: ajustar por las variables que determinan la exposición y verificar que haya
+traslape entre grupos antes de estimar~\cite{rosenbaum1983}. Segundo, que la incertidumbre respete la estructura de
+los datos: con observaciones agrupadas, los errores estándar ingenuos subestiman la incertidumbre y deben agruparse
+al nivel en que se asigna la variación~\cite{cameron2015}, y las fuentes jerárquicas de variación se describen mejor
+con modelos multinivel que con un solo término de error~\cite{gelman2007}. Tercero, validar sin verdad de terreno:
+controles negativos que no deberían responder a la exposición~\cite{lipsitch2010}, análisis de multiverso que muestren
+juntas las alternativas razonables de depuración~\cite{steegen2016} y análisis de sensibilidad que digan qué tan
+fuerte tendría que ser un confusor no medido para anular la conclusión, idealmente contra un confusor observado de
+referencia~\cite{cinelli2020,vanderweele2017}. Cuando se examinan muchos grupos, el control de la tasa de
+descubrimientos falsos~\cite{benjamini1995} y la agregación parcial~\cite{gelman2012} limitan los hallazgos espurios,
+y elegir el grupo con el mejor resultado sobrestima su efecto: la maldición del optimizador~\cite{smith2006}. Estas
+herramientas se desarrollaron sobre todo en epidemiología y economía; su aplicación a la cadena de laminación es
+escasa, y es lo que este trabajo intenta.
+
+\subsection{Aprendizaje automático en manufactura}
+El aprendizaje automático promete extraer patrones de procesos complejos y ya tiene aplicaciones exitosas en
+manufactura, pero su adopción enfrenta dos retos comunes: conseguir datos relevantes, cuya disponibilidad, calidad y
+composición condicionan el desempeño, e interpretar los resultados~\cite{wuest2016}. Dos riesgos son específicos de nuestro caso. El primero es la fuga de
+información: variables posteriores al resultado o etiquetas generadas por reglas sobre las mismas mediciones inflan
+el desempeño y producen modelos inútiles en operación~\cite{kaufman2012,kapoor2023}. El segundo es la validación: si
+rollos del mismo programa quedan a la vez en entrenamiento y prueba, el modelo aprende el programa y no el rollo, y
+el desempeño reportado es optimista; las particiones deben respetar el tiempo y los grupos~\cite{roberts2017}. Aun
+evitando ambos riesgos, un buen modelo predictivo no es un modelo explicativo: la importancia de una variable dice
+qué usa el modelo para predecir, no qué pasaría al intervenirla~\cite{shmueli2010}.
+
+\subsection{Síntesis y vacío}
+\label{sec:vacio}
+Las cinco líneas coinciden en algo que rara vez se dice junto. La física de la laminación explica por qué la forma
+de entrada debería importar al Skinpass~\cite{lenard2014}, pero la literatura que revisamos la estudia dentro de una
+pasada y no con la población de rollos de una planta~\cite{kijima2008}. Los datos de planta permiten describir esa
+población, pero no contestar por sí solos qué receta sería mejor~\cite{box1966,hernan2019}.
+
+Eso responde por qué la optimización de parámetros con aprendizaje automático no resuelve por sí sola el problema de
+Ternium. Un modelo que predice la calidad a partir del producto y de la configuración, y que después se optimiza,
+aprende qué configuraciones tuvieron los rollos que salieron bien bajo la regla histórica de asignación, no qué pasaría
+si se cambiara la receta~\cite{hernan2019,shmueli2010}. Con una receta por tipo de material, casi no hay variación de
+configuración dentro de cada producto, de modo que el modelo extrapola fuera del soporte observado. El bending real
+lo fija un lazo que reacciona a la forma del rollo, lo que lo convierte en mediador y no en palanca. Y sin planeza de
+salida no hay un resultado de forma que optimizar.
+
+El vacío concreto que atendemos es previo a cualquier optimización: no encontramos, en la literatura revisada, una
+medición de cuánto de la corrección que aplica el lazo de bending del Skinpass se explica por el producto y cuánto por
+el programa o el periodo, a partir de datos ligados entre el molino caliente y el de temple. Esa cantidad acota lo que
+una receta por producto podría absorber, y es la que este artículo estima.

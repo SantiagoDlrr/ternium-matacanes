@@ -1,0 +1,7 @@
+supuesto,enunciado,evidencia
+S1,"Preset en kN, como el real","p1–p99 preset -300 a 700; real -348 a 446; pendiente real~preset 0.42, r = 0.53"
+S2,Preset 0 = sin preset,11.1 % de los rollos (modo Fuerza: 21.6 %); con preset 0 el real tiene mediana -57 kN y es exactamente 0 en 0.0 %
+S3,Preset fijado antes del rollo,"preset único en 79 % de todos los grupos programa × producto × dimensión (n = 20,499) y en 50 % de los que tienen ≥ 2 rollos (n = 8,568); su asociación con la corona se estima en el notebook 08"
+S4,Programa ≈ mismo rodillo de trabajo,"74.8 % de los programas usa un solo rodillo; 35 rodillos, mediana 28 programas por rodillo"
+S5,Bending real responde a un lazo de planeza,"el real se aparta del preset: mediana de Y = -45 kN, |Y| > 50 kN en 59 %"
+S6,Corona en µm,corona mediana 60 µm (p5–p95 44–147); espesor mediano 3.06 mm; corona relativa mediana 2.04 %

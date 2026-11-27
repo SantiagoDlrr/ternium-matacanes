@@ -1,0 +1,105 @@
+id,familia,contraste,resultado,estimacion,ic_inf,ic_sup,unidades,p,q_bh,rollos,grupos,nota
+1,8.B descomposición (orden del plan),exceso sobre el azar: tipo,Y,0.2190563648717563,-0.014758244546448761,0.45287097428996137,% de la SC de Y,,,44272.0,3.0,"observado 0.2 %, nulo 0.0 %"
+2,8.B descomposición (orden del plan),exceso sobre el azar: producto,Y,8.815152558790276,7.0161869352628985,10.614118182317652,% de la SC de Y,,,44272.0,417.0,"observado 9.7 %, nulo 0.9 %"
+3,8.B descomposición (orden del plan),exceso sobre el azar: dimension,Y,3.9510490884129417,3.061275886943473,4.84082228988241,% de la SC de Y,,,44272.0,1652.0,"observado 6.5 %, nulo 2.6 %"
+4,8.B descomposición (orden del plan),exceso sobre el azar: programa_skp,Y,22.073402719970307,20.50935915031886,23.637446289621757,% de la SC de Y,,,44272.0,20710.0,"observado 61.4 %, nulo 39.4 %"
+5,8.B descomposición (programa primero),exceso sobre el azar: tipo,Y,0.2190563648717563,-0.014758244546448761,0.45287097428996137,% de la SC de Y,,,44272.0,3.0,"observado 0.2 %, nulo 0.0 %"
+6,8.B descomposición (programa primero),exceso sobre el azar: programa_skp,Y,26.291683083382694,24.038220307792244,28.545145858973143,% de la SC de Y,,,44272.0,1621.0,"observado 29.8 %, nulo 3.5 %"
+7,8.B descomposición (programa primero),exceso sobre el azar: producto,Y,13.724676495885502,12.37120056827568,15.078152423495322,% de la SC de Y,,,44272.0,15559.0,"observado 37.3 %, nulo 23.6 %"
+8,8.B descomposición (programa primero),exceso sobre el azar: dimension,Y,3.0676856738910963,2.594056491602874,3.541314856179319,% de la SC de Y,,,44272.0,20710.0,"observado 10.6 %, nulo 7.5 %"
+9,V4 programa vs. periodo,exceso sobre el azar: programa_skp,Y,22.073402719970307,20.50935915031886,23.637446289621757,% de la SC de Y,,,44272.0,20710.0,
+10,V4 programa vs. periodo,exceso sobre el azar: dia_skp,Y,20.504919051884375,19.228214049690013,21.781624054078733,% de la SC de Y,,,44272.0,19133.0,
+11,V4 programa vs. periodo,exceso sobre el azar: semana_skp,Y,13.375926456445317,12.008144339770102,14.743708573120532,% de la SC de Y,,,44272.0,12152.0,
+12,V4 programa vs. periodo,exceso sobre el azar: rodillo_trabajo,Y,13.226170467020495,11.84169726555745,14.610643668483542,% de la SC de Y,,,44272.0,11704.0,
+13,8.C asociación principal,pendiente de corona_rel_pct,Y,-3.901499518209847,-6.594016895554256,-1.2089821408654373,kN por unidad,0.0045624493742364835,,41539.0,828.0,R² parcial 0.00022
+14,8.C asociación principal,pendiente de dev_te,Y,-0.23132030783282265,-0.6162978634345067,0.15365724776886136,kN por unidad,0.23857661395815036,,41539.0,828.0,R² parcial 0.00004
+15,Indicadores secundarios,pendiente de corona_rel_pct,Bending real (kN),-3.782799634181027,-6.032107022285697,-1.5334922460763578,por unidad de la exposición,0.0010046054259446218,,41539.0,828.0,
+16,Indicadores secundarios,pendiente de dev_te,Bending real (kN),-0.35759281316180236,-0.6626960740905636,-0.052489552233041026,por unidad de la exposición,0.021666809147870236,,41539.0,828.0,
+17,Indicadores secundarios,pendiente de corona_rel_pct,Defecto de inspector en el Skinpass (pp),-0.2190160491177624,-0.4479478097327426,0.009915711497217844,por unidad de la exposición,0.06075743995432649,,41539.0,828.0,
+18,Indicadores secundarios,pendiente de dev_te,Defecto de inspector en el Skinpass (pp),-0.008560808984754193,-0.03672291357438743,0.01960129560487904,por unidad de la exposición,0.550891339231857,,41539.0,828.0,
+19,Indicadores secundarios,pendiente de corona_rel_pct,RETENIDO en el Skinpass (pp),-0.14108499401303615,-0.4950649989158318,0.21289501088975948,por unidad de la exposición,0.43424854942074603,,41539.0,828.0,
+20,Indicadores secundarios,pendiente de dev_te,RETENIDO en el Skinpass (pp),-0.04911073058481382,-0.1229077181009513,0.024686256931323654,por unidad de la exposición,0.19183521631452205,,41539.0,828.0,
+21,Indicadores secundarios,pendiente de corona_rel_pct,"Elongación lograda, modo Elongación (%)",5.4418446084134915e-05,-0.0016757991403286065,0.0017846360324968765,por unidad de la exposición,0.9507760258825787,,39455.0,675.0,
+22,Indicadores secundarios,pendiente de dev_te,"Elongación lograda, modo Elongación (%)",-1.975358906717565e-06,-0.00030447478173353153,0.00030052406392009636,por unidad de la exposición,0.9897737314999202,,39455.0,675.0,
+23,Indicadores secundarios,pendiente de corona_rel_pct,Preset de bending (kN; comprobación de S3),0.11869988402882015,-2.570651068366206,2.8080508364238463,por unidad de la exposición,0.9309836313744773,,41539.0,828.0,
+24,Indicadores secundarios,pendiente de dev_te,Preset de bending (kN; comprobación de S3),-0.12627250532898002,-0.5342239972111689,0.2816789865532089,por unidad de la exposición,0.5436505258714982,,41539.0,828.0,
+25,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | HSLAS 55 CLASE 1,Y,-30.044668849756548,-73.97792637501382,13.888588675500728,kN por pp,0.1785509881591417,0.6959149882091431,532.0,142.0,DECAPADO
+26,8.D heterogeneidad por producto,pendiente de corona en GMW3032M-ST-S | HR550LA,Y,-20.048850228979305,-60.15561403716231,20.0579135792037,kN por pp,0.3253171290822321,0.6959149882091431,623.0,186.0,DECAPADO
+27,8.D heterogeneidad por producto,pendiente de corona en SAE J2340 | HSLAS 420 XF,Y,-15.511603095567917,-32.076264018158795,1.0530578270229647,kN por pp,0.06635161498330774,0.6959149882091431,846.0,321.0,DECAPADO
+28,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | HSLAS 50 CLASE 2,Y,-15.109222135675388,-39.477694350873506,9.25925007952273,kN por pp,0.22237285858811467,0.6959149882091431,365.0,145.0,CALIENTE
+29,8.D heterogeneidad por producto,pendiente de corona en TER | 1006 GAL,Y,-14.117914762319717,-30.817382471551195,2.58155294691176,kN por pp,0.09719626762466993,0.6959149882091431,999.0,280.0,DECAPADO
+30,8.D heterogeneidad por producto,pendiente de corona en GMW3032M-ST-S | HR420LA,Y,-10.659575261576084,-28.65866830350046,7.339517780348292,kN por pp,0.24496599970363736,0.6959149882091431,1343.0,379.0,DECAPADO
+31,8.D heterogeneidad por producto,pendiente de corona en TER | 060 XLF,Y,-9.147899327225431,-28.995589144216126,10.699790489765263,kN por pp,0.36250197780876126,0.6959149882091431,322.0,96.0,CALIENTE
+32,8.D heterogeneidad por producto,pendiente de corona en SAE J403 | 1006,Y,-8.500704597018274,-19.652543825567676,2.6511346315311304,kN por pp,0.13469049888022205,0.6959149882091431,1508.0,328.0,CALIENTE
+33,8.D heterogeneidad por producto,pendiente de corona en TER | 1010MODIF,Y,-8.382221959327554,-17.13818525896161,0.37374134030650197,kN por pp,0.0605052200858796,0.6959149882091431,851.0,191.0,CALIENTE
+34,8.D heterogeneidad por producto,pendiente de corona en TER | DDQ-COPELAND,Y,-8.326719279774364,-22.779468551909304,6.126029992360573,kN por pp,0.25681420286367035,0.6959149882091431,468.0,154.0,DECAPADO
+35,8.D heterogeneidad por producto,pendiente de corona en TSG3101G | SPH590,Y,-7.943562318649567,-23.155663655674356,7.268539018375222,kN por pp,0.30458996776514846,0.6959149882091431,670.0,227.0,DECAPADO
+36,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | CS TIPO B,Y,-6.811900140335474,-13.335087894705708,-0.2887123859652405,kN por pp,0.04072541044732337,0.6959149882091431,2011.0,449.0,CALIENTE
+37,8.D heterogeneidad por producto,pendiente de corona en TER | RF-21 Q7,Y,-5.9598313254977295,-26.507704217466788,14.58804156647133,kN por pp,0.5680212375772966,0.8283643048002243,445.0,203.0,DECAPADO
+38,8.D heterogeneidad por producto,pendiente de corona en TSG3101G | SPH440,Y,-5.795213134367062,-14.372000520865821,2.7815742521316977,kN por pp,0.18422137839487615,0.6959149882091431,668.0,196.0,DECAPADO
+39,8.D heterogeneidad por producto,pendiente de corona en TER | J403 1527,Y,-4.858356142288024,-31.983290941637076,22.26657865706103,kN por pp,0.7234205829929764,0.9042757287412205,390.0,117.0,DECAPADO
+40,8.D heterogeneidad por producto,pendiente de corona en SAE J403 | 1008,Y,-4.263040150404235,-11.359666176629856,2.8335858758213863,kN por pp,0.23839704598594177,0.6959149882091431,2491.0,446.0,CALIENTE
+41,8.D heterogeneidad por producto,pendiente de corona en GMW3032M-ST-S | HR340LA,Y,-3.602393938225638,-11.965640219819445,4.760852343368168,kN por pp,0.3976657075480818,0.6959149882091431,2238.0,425.0,DECAPADO
+42,8.D heterogeneidad por producto,pendiente de corona en TER | 1006,Y,-3.1434898900741266,-12.859064475605031,6.572084695456777,kN por pp,0.5239046398910746,0.8030314102242629,841.0,173.0,DECAPADO
+43,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | SS 36 TIPO 1,Y,-3.1244236761976523,-8.861436953335986,2.6125896009406806,kN por pp,0.2829505259826916,0.6959149882091431,400.0,116.0,CALIENTE
+44,8.D heterogeneidad por producto,pendiente de corona en SAE J403 | 1010,Y,-3.0354137027959553,-9.98501921005869,3.9141918044667796,kN por pp,0.3912348317511859,0.6959149882091431,2872.0,507.0,CALIENTE
+45,8.D heterogeneidad por producto,pendiente de corona en TER | RF-21 Q4,Y,-2.960622025595706,-23.171127146114834,17.24988309492342,kN por pp,0.7728767193393701,0.9327822474785501,505.0,182.0,DECAPADO
+46,8.D heterogeneidad por producto,pendiente de corona en GMW2M-ST-S | HR3,Y,-2.9308465305511513,-18.72513717274964,12.863444111647336,kN por pp,0.7151672917017758,0.9042757287412205,697.0,277.0,DECAPADO
+47,8.D heterogeneidad por producto,pendiente de corona en GMW3032M-ST-S | HR500LA,Y,-2.3569551681400256,-11.877173187120052,7.163262850840001,kN por pp,0.625413252090655,0.875578552926917,645.0,150.0,DECAPADO
+48,8.D heterogeneidad por producto,pendiente de corona en TSG3101G | SPH270C,Y,-2.005652771272328,-24.49823056551792,20.486925022973267,kN por pp,0.8607373358347491,0.9414314610692568,754.0,252.0,DECAPADO
+49,8.D heterogeneidad por producto,pendiente de corona en ASTM A 572 | 50 TIPO 1,Y,-0.8708347498982674,-8.193805227522194,6.45213572772566,kN por pp,0.8150747724731325,0.9414314610692568,959.0,275.0,CALIENTE
+50,8.D heterogeneidad por producto,pendiente de corona en SAE J2340 | HSLAS 550 XF,Y,-0.7973758081985962,-19.962380650015763,18.367629033618574,kN por pp,0.9347548724917896,0.9630334758474439,562.0,248.0,DECAPADO
+51,8.D heterogeneidad por producto,pendiente de corona en SAE J2340 | HSLAS 340 XF,Y,-0.1931929102376999,-7.612641038802894,7.226255218327494,kN por pp,0.9591407970763128,0.9630334758474439,618.0,251.0,DECAPADO
+52,8.D heterogeneidad por producto,pendiente de corona en SAE J2340 | HSLAS 490 XF,Y,0.4993269789939636,-20.69704496959603,21.695698927583955,kN por pp,0.9630334758474438,0.9630334758474439,612.0,254.0,DECAPADO
+53,8.D heterogeneidad por producto,pendiente de corona en ASTM A 36 | ¿sin grado?,Y,1.0192170666087252,-8.844027745266585,10.882461878484035,kN por pp,0.8390880628736521,0.9414314610692568,1442.0,367.0,CALIENTE
+54,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | HSLAS 50 CLASE 1,Y,1.239986623082065,-5.45081831238828,7.93079155855241,kN por pp,0.7151650371045075,0.9042757287412205,598.0,201.0,CALIENTE
+55,8.D heterogeneidad por producto,pendiente de corona en MS 50002 | LAH340Y410T,Y,2.967743269053657,-6.2667927255622375,12.202279263669553,kN por pp,0.5277063552902299,0.8030314102242629,1214.0,335.0,DECAPADO
+56,8.D heterogeneidad por producto,pendiente de corona en TER | 3HYLWHP,Y,5.207317528341704,-9.427662311144633,19.842297367828042,kN por pp,0.48227500522107686,0.8030314102242629,637.0,113.0,CALIENTE
+57,8.D heterogeneidad por producto,pendiente de corona en TER | RF-Q8,Y,6.88323451558657,-8.174642680153053,21.94111171132619,kN por pp,0.3652049828518198,0.6959149882091431,319.0,73.0,DECAPADO
+58,8.D heterogeneidad por producto,pendiente de corona en ASTM A 1011 | HSLAS-F 50,Y,8.30813211840681,-8.832954491088675,25.449218727902295,kN por pp,0.3401381302651615,0.6959149882091431,482.0,180.0,DECAPADO
+59,8.D heterogeneidad por producto,pendiente de corona en TER | RF-21 Q1,Y,10.236466218401183,-9.683772095794886,30.156704532597253,kN por pp,0.3113501568407623,0.6959149882091431,337.0,138.0,DECAPADO
+60,V1 control negativo,inclusiones (Y ~ inclusiones + FE),Y,-0.2697328564596617,-9.28908909335929,8.749623380439967,kN,0.9532047699154359,,41556.0,828.0,
+61,V1 control negativo,inclusiones (Y ~ inclusiones + corona + desv. T. enrollado + FE),Y,0.0899290679007646,-8.943607065966741,9.12346520176827,kN,0.9844149726489713,,41539.0,828.0,
+62,V3 robustez: pendiente de corona,Base: plan congelado — pendiente de corona,Y,-3.901499518209847,-6.594016895554256,-1.2089821408654373,kN por pp,0.0045624493742364835,,41539.0,828.0,
+63,V3 robustez: exceso del grupo − producto,Base: plan congelado — exceso grupo − producto,Y,13.115077774500266,,,puntos de % de la SC,,,44272.0,,"grupo 21.9 %, producto 8.8 %"
+64,V3 robustez: pendiente de corona,R1: corona en p0.5–p99.5 — pendiente de corona,Y,-3.987130644656064,-7.059720912156627,-0.9145403771555012,kN por pp,0.01104370183956085,,41106.0,824.0,
+65,V3 robustez: exceso del grupo − producto,R1: corona en p0.5–p99.5 — exceso grupo − producto,Y,13.115077774500266,,,puntos de % de la SC,,,44272.0,,"grupo 21.9 %, producto 8.8 %"
+66,V3 robustez: pendiente de corona,R1: corona ≤ 600 µm — pendiente de corona,Y,-4.106480562168745,-6.921088425223974,-1.2918726991135148,kN por pp,0.00429248902997539,,41463.0,827.0,
+67,V3 robustez: exceso del grupo − producto,R1: corona ≤ 600 µm — exceso grupo − producto,Y,13.115077774500266,,,puntos de % de la SC,,,44272.0,,"grupo 21.9 %, producto 8.8 %"
+68,V3 robustez: pendiente de corona,R2: producto = Norma — pendiente de corona,Y,-5.71208655892144,-8.769658440043635,-2.6545146777992454,kN por pp,0.00026114567452172743,,42826.0,830.0,
+69,V3 robustez: exceso del grupo − producto,R2: producto = Norma — exceso grupo − producto,Y,24.732754220765184,,,puntos de % de la SC,,,44272.0,,"grupo 27.0 %, producto 2.3 %"
+70,V3 robustez: pendiente de corona,R2: producto = Norma | Grado | Subnorma — pendiente de corona,Y,-3.8568543728163753,-6.5409781923556505,-1.1727305532771002,kN por pp,0.004910761472458342,,41376.0,828.0,
+71,V3 robustez: exceso del grupo − producto,R2: producto = Norma | Grado | Subnorma — exceso grupo − producto,Y,12.698465903235212,,,puntos de % de la SC,,,44272.0,,"grupo 21.7 %, producto 9.0 %"
+72,V3 robustez: pendiente de corona,R3: corte 15-nov — pendiente de corona,Y,-4.946918575312128,-8.658017661839231,-1.2358194887850238,kN por pp,0.00904975030058219,,39325.0,786.0,
+73,V3 robustez: exceso del grupo − producto,R3: corte 15-nov — exceso grupo − producto,Y,13.223652361531968,,,puntos de % de la SC,,,41966.0,,"grupo 22.1 %, producto 8.8 %"
+74,V3 robustez: pendiente de corona,R3: sin corte de censura — pendiente de corona,Y,-2.1770474786106937,-4.4705496197840855,0.11645466256269765,kN por pp,0.06279337973434919,,44388.0,856.0,
+75,V3 robustez: exceso del grupo − producto,R3: sin corte de censura — exceso grupo − producto,Y,13.313923968527618,,,puntos de % de la SC,,,47365.0,,"grupo 22.2 %, producto 8.9 %"
+76,V3 robustez: pendiente de corona,R4: Y de la primera pieza — pendiente de corona,Y,-3.984777964840728,-6.704701642470953,-1.2648542872105035,kN por pp,0.004135921789890962,,41539.0,828.0,
+77,V3 robustez: exceso del grupo − producto,R4: Y de la primera pieza — exceso grupo − producto,Y,12.94561617047479,,,puntos de % de la SC,,,44272.0,,"grupo 21.7 %, producto 8.8 %"
+78,V3 robustez: pendiente de corona,R4: excluir rollos divididos — pendiente de corona,Y,-4.898816462320974,-8.05743200737128,-1.7402009172706667,kN por pp,0.0024149469453354482,,33995.0,683.0,
+79,V3 robustez: exceso del grupo − producto,R4: excluir rollos divididos — exceso grupo − producto,Y,16.96619666660814,,,puntos de % de la SC,,,36349.0,,"grupo 22.2 %, producto 5.3 %"
+80,V3 robustez: pendiente de corona,R5: excluir preset = 0 — pendiente de corona,Y,-4.249263362496366,-7.215582627428139,-1.2829440975645938,kN por pp,0.0050442162877799325,,36737.0,818.0,
+81,V3 robustez: exceso del grupo − producto,R5: excluir preset = 0 — exceso grupo − producto,Y,14.675160438627316,,,puntos de % de la SC,,,39341.0,,"grupo 24.0 %, producto 9.3 %"
+82,V3 robustez: pendiente de corona,R6: incluir rollos sin SKP_PSQ en la ruta — pendiente de corona,Y,-4.18692975144603,-6.855829542860837,-1.5180299600312224,kN por pp,0.0021434525198984512,,42068.0,833.0,
+83,V3 robustez: exceso del grupo − producto,R6: incluir rollos sin SKP_PSQ en la ruta — exceso grupo − producto,Y,13.148812764568063,,,puntos de % de la SC,,,44927.0,,"grupo 22.2 %, producto 9.1 %"
+84,V3 robustez: pendiente de corona,R7: agregar |cuña| relativa — pendiente de corona,Y,-4.088179820791307,-6.82566992690813,-1.3506897146744836,kN por pp,0.003468386455698001,,41539.0,828.0,
+85,V3 robustez: exceso del grupo − producto,R7: agregar |cuña| relativa — exceso grupo − producto,Y,13.115077774500266,,,puntos de % de la SC,,,44272.0,,"grupo 21.9 %, producto 8.8 %"
+86,V3 robustez: pendiente de corona,R8: excluir preset > máximo bending real — pendiente de corona,Y,-3.0579819554054644,-5.337224678687928,-0.7787392321230002,kN por pp,0.00860955504939545,,39869.0,828.0,
+87,V3 robustez: exceso del grupo − producto,R8: excluir preset > máximo bending real — exceso grupo − producto,Y,11.594159241331955,,,puntos de % de la SC,,,42539.0,,"grupo 24.1 %, producto 12.5 %"
+88,V3 robustez: pendiente de corona,R9: rodillo de trabajo en vez de programa — pendiente de corona,Y,-3.901499518209847,-7.2513553733468585,-0.5516436630728352,kN por pp,0.023772667838463084,,41539.0,35.0,
+89,V3 robustez: exceso del grupo − producto,R9: rodillo de trabajo en vez de programa — exceso grupo − producto,Y,4.3413210786723475,,,puntos de % de la SC,,,44272.0,,"grupo 13.2 %, producto 8.8 %"
+90,V3 robustez: pendiente de corona,V4: día del Skinpass en vez de programa — pendiente de corona,Y,-3.901499518209847,-6.245631880065602,-1.5573671563540912,kN por pp,0.0011686784753862527,,41539.0,350.0,
+91,V3 robustez: exceso del grupo − producto,V4: día del Skinpass en vez de programa — exceso grupo − producto,Y,11.561467314853113,,,puntos de % de la SC,,,44272.0,,"grupo 20.4 %, producto 8.8 %"
+92,V3 robustez: pendiente de corona,V4: semana del Skinpass en vez de programa — pendiente de corona,Y,-3.901499518209847,-6.279217106518834,-1.5237819299008595,kN por pp,0.0017888349275121016,,41539.0,53.0,
+93,V3 robustez: exceso del grupo − producto,V4: semana del Skinpass en vez de programa — exceso grupo − producto,Y,4.449986008486947,,,puntos de % de la SC,,,44272.0,,"grupo 13.3 %, producto 8.8 %"
+94,10 confusión no medida,valor de robustez RV (q = 1) de la pendiente de corona,Y,1.4660378258760367,,,% de varianza residual,,,,,"referencia producto: R² parcial con corona 34.0 %, con Y 24.8 %; un confusor 0.025 veces tan fuerte como el producto la anula"
+95,8.E predictivo,Agrupada por programa (GroupKFold): MAE modelo − línea base,Y,-2.079444560734089,,,kN (media entre particiones),,,,,DE entre particiones 0.77; mejora en 5 de 5
+96,8.E predictivo,Agrupada por programa (GroupKFold): R² modelo − línea base,Y,0.034734870836552134,,,R²,,,,,DE entre particiones 0.005
+97,8.E predictivo,Temporal (ene–ago → sep–nov): MAE modelo − línea base,Y,0.8364170929829413,,,kN (media entre particiones),,,,,DE entre particiones nan; mejora en 0 de 1
+98,8.E predictivo,Temporal (ene–ago → sep–nov): R² modelo − línea base,Y,0.04151368378313813,,,R²,,,,,DE entre particiones nan
+99,8.E predictivo,Aleatoria (KFold; mezcla programas): MAE modelo − línea base,Y,-2.207363860958284,,,kN (media entre particiones),,,,,DE entre particiones 0.42; mejora en 5 de 5
+100,8.E predictivo,Aleatoria (KFold; mezcla programas): R² modelo − línea base,Y,0.03131715785725584,,,R²,,,,,DE entre particiones 0.007
+101,12 experimento: tamaño del efecto,|Y| con receta vigente − |Y| con recentrado global,|Y|,7.219720813750013,,,kN (media de 5 particiones agrupadas),,,,,DE entre particiones 2.25
+102,12 experimento: tamaño del efecto,|Y| con receta vigente − |Y| con recentrado por tipo de material,|Y|,7.274709733614179,,,kN (media de 5 particiones agrupadas),,,,,DE entre particiones 2.22
+103,12 experimento: tamaño del efecto,|Y| con receta vigente − |Y| con recentrado por producto × dimensión,|Y|,8.043225709118582,,,kN (media de 5 particiones agrupadas),,,,,DE entre particiones 1.78
+104,12 experimento: tamaño del efecto,lo que agrega diferenciar por producto al recentrado global,|Y|,0.8235048953685691,,,kN (media de 5 particiones agrupadas),,,,,DE entre particiones 1.39

@@ -1,0 +1,90 @@
+\section{Diccionario razonado de las variables que usa el análisis}
+\label{sec:anexo-diccionario}
+La Tabla~\ref{tab:diccionario} lista las variables que entran al análisis. El diccionario completo del MC4 (76
+variables) está en el repositorio (\texttt{outputs/tablas/diccionario\_razonado.csv}). \emph{Estado}: observado
+(verificado en los datos), inferido (interpretación nuestra) o supuesto (sin confirmación posible; Anexo~\ref{sec:anexo-supuestos}).
+
+\begin{table}[!h]
+\centering
+\caption{Diccionario razonado. Fuente: MC4 (archivos MC4\_PSQ) o SKP (archivos SKP\_PSQ). Tipo: especificación (se fija
+antes de producir), medición, etiqueta (la calcula el sistema o la asigna un inspector) o identificador.}
+\label{tab:diccionario}
+\footnotesize
+\begin{tabular}{L{3.2cm}cL{4.4cm}cL{1.8cm}L{2.5cm}c}
+\toprule
+Variable (columna) & Fuente & Qué es & Unidad & Tipo & Papel & Estado \\
+\midrule
+Material Salida / Material Entrada & MC4 / SKP & Identificador del rollo; llave de la unión & --- & identificador & llave & observado \\
+Programa & SKP & Tanda de rollos procesados de corrido en el Skinpass (mediana \MedianaRollosPrograma) & --- & identificador & grupo, agrupación de errores & inferido \\
+Rodillo de Trabajo & SKP & Rodillo de trabajo montado (\NRodillos{} rodillos) & --- & identificador & alternativa al programa (R9) & observado \\
+Norma, Grado & MC4 & Estándar del acero y su variante; juntos son el producto & --- & especificación & confusor & observado \\
+Espesor y Ancho Objetivo & MC4 & Dimensión pedida, en rangos & mm & especificación & confusor & observado \\
+Fecha Inicio & MC4 & Inicio de laminación; da el mes y el corte de censura & --- & medición & confusor (periodo) & observado \\
+Corona Salida, Espesor & MC4 & Corona de salida y espesor medido; su cociente es la corona relativa & µm, mm & medición & exposición & supuesto (S6) \\
+Temp Enrollado Real y Obj & MC4 & Temperatura de enrollado real y objetivo & °C & medición / esp. & exposición secundaria & observado \\
+Defecto (i) = INCLUSIONES & MC4 & Defecto con origen en el acero & --- & etiqueta & control negativo & observado \\
+Acuñamiento Salida & MC4 & Cuña de salida & µm & medición & comprobación (R7) & supuesto \\
+Preset Bending & SKP & Bending fijado por la receta & kN & especificación & componente de $\Y$ & supuesto (S1, S2) \\
+Bending Prom. Real [kN] & SKP & Bending real promedio aplicado por el lazo & kN & medición & componente de $\Y$ & observado \\
+Fuerza, Tensiones reales & SKP & Fuerza de laminación y tensiones promedio & kN & medición & simultáneas (no entran) & observado \\
+Elongación, Modo Molino & SKP & Elongación lograda; modo fuerza o elongación & \%, --- & medición & indicador secundario & observado \\
+Registro Automatico (i), Linea Origen (i) & SKP & Si el defecto lo puso el sistema y en qué línea nació & --- & etiqueta & define el indicador de inspector & observado \\
+Dictamen & SKP & ACEPTADO, RETENIDO o REPROCESO & --- & etiqueta & indicador secundario & observado \\
+Peso & SKP & Peso de cada pieza; pondera la agregación por rollo & kg & medición & ponderador & observado \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Preguntas al Socio Formador y supuestos}
+\label{sec:anexo-supuestos}
+En la Entrega~I, Ternium respondió dos preguntas: el acuñamiento de un solo lado no es una prioridad operativa (por
+eso salió de la pregunta) y compartió señales de bending del Skinpass de 2026 a 25~Hz, que no coinciden con ningún
+rollo de 2025 y quedaron fuera de alcance. Las demás preguntas (qué resume cada valor, unidades, registro de rodillos,
+reglas automáticas) ya no pueden consultarse; cada una se convirtió en un supuesto explícito con su evidencia y su
+prueba de sensibilidad (Tabla~\ref{tab:supuestos}).
+
+\begin{table}[!h]
+\centering
+\caption{Supuestos, evidencia en los datos y prueba de sensibilidad.}
+\label{tab:supuestos}
+\footnotesize
+\begin{tabular}{cL{3.5cm}L{6.6cm}L{2.9cm}L{2.6cm}}
+\toprule
+& Supuesto & Evidencia & Si es falso & Sensibilidad \\
+\midrule
+S1 & El preset está en kN, como el bending real & Misma escala (percentiles 1--99: preset \PresetPuno{} a \PresetPnoventaynueve; real \RealPuno{} a \RealPnoventaynueve~kN); el real sigue al preset (pendiente \PendRealPreset, $r=\CorrRealPreset$) & $\Y$ mezclaría unidades & R8; el bending real (sin preset) da la misma pendiente \\
+S2 & Preset cero significa ``sin preset'' & \PctPresetCero\,\% de los rollos; con preset cero el bending real sigue activo (mediana \BendRealPresetCero~kN; exactamente cero en \PctRealCeroPresetCero\,\%) & $\Y$ sería otra cosa en esos rollos & R5 \\
+S3 & El preset se fija antes del rollo y no reacciona a él & Único en \PctPresetUnicoTodos\,\% de los grupos programa $\times$ producto $\times$ dimensión (\PctPresetUnicoDos\,\% con dos o más rollos); no responde a la corona (\PendPreset~kN/pp) & El preset sería una respuesta & Se describe; afecta la lectura \\
+S4 & El programa agrupa rollos con el mismo rodillo de trabajo & \PctProgUnRodillo\,\% de los programas usa un solo rodillo; mediana de \MedianaProgRodillo{} programas por rodillo & El programa no reflejaría el rodillo & R9 \\
+S5 & El bending real responde a un lazo de planeza & El real se aparta del preset (mediana de $\Y$: \YMediana~kN; $|\Y|>50$~kN en \PctYMayorCincuenta\,\%) & El bending sería una decisión manual & Se describe en el diagrama \\
+S6 & La corona está en µm & Mediana \CoronaMedianaUm~µm (p5--p95: \CoronaPcincoUm--\CoronaPnoventaycincoUm) con espesor mediano de \EspesorMediano~mm: corona relativa de \CoronaRelMediana\,\% & Cambia la escala de la pendiente, no su signo & Pendiente también por DE \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Tabla completa de contrastes examinados}
+\label{sec:anexo-contrastes}
+Examinamos \NContrastes{} contrastes. Cada uno, con su estimación, intervalo, unidades, valor $p$, valor $q$ de
+Benjamini--Hochberg cuando corresponde, rollos y grupos, está en \texttt{outputs/tablas/contrastes\_completos.csv}. La
+Tabla~\ref{tab:contrastes} los resume por familia; en el cuerpo del artículo solo aparecen los que contestan la pregunta.
+
+\begin{table}[!h]
+\centering
+\caption{Resumen de los contrastes por familia. Mín.\ y Máx.: rango de las estimaciones en la familia. IC excluye 0:
+cuántos intervalos de 95\,\% excluyen el cero. $q_{\min}$: menor valor $q$ de Benjamini--Hochberg.}
+\label{tab:contrastes}
+\footnotesize
+\input{generado/tabla_contrastes_resumen.tex}
+\end{table}
+
+\section{Plan de análisis}
+\label{sec:anexo-plan}
+El plan (\texttt{docs/plan\_de\_analisis.md}) fijó, antes de la estimación principal, la pregunta y la afirmación más fuerte
+que esperábamos sostener, la unión y la población con sus exclusiones, el resultado y los indicadores secundarios, el
+conjunto de ajuste derivado del diagrama, el diagnóstico de soporte, los análisis, los cuatro anclajes de validación
+con sus criterios de refutación, las nueve alternativas de robustez y los seis supuestos. Su bitácora registra, con fecha
+y motivo, los cambios posteriores. Los principales: el intervalo del exceso sobre el azar se calcula con mitades de
+programas en lugar de bootstrap con reemplazo (el bootstrap se conserva en el repositorio); se definió de antemano qué
+cuenta como mejora clara del modelo predictivo; el signo físico esperado se presenta como argumento mecánico del equipo,
+porque la referencia prevista no lo confirma; y la propuesta de experimento, escrita después de ver los resultados,
+agrega el factor de recentrado por producto y cambia la unidad de asignación del programa al rollo dentro de programa.

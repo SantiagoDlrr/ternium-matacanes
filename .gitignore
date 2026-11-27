@@ -30,3 +30,14 @@ __pycache__/
 .vscode/
 .idea/
 CLAUDE.md
+
+# --- LaTeX (artículo): auxiliares de compilación ---
+articulo/*.aux
+articulo/*.log
+articulo/*.bbl
+articulo/*.blg
+articulo/*.fls
+articulo/*.fdb_latexmk
+articulo/*.out
+articulo/*.spl
+articulo/*.synctex.gz

@@ -1,0 +1,72 @@
+\section{Conclusiones y propuesta de validación}
+\label{sec:conclusiones}
+
+En un año de rollos ligados entre el MC4 y el Skinpass de Pesquería, la corrección que el lazo de bending aplica sobre
+la receta depende más del programa del Skinpass, o del periodo en que se procesa el rollo, que del producto: el
+programa explica \ExcesoPrograma~puntos de su variación por encima del azar y el producto \ExcesoProducto. La corona con
+que el rollo sale del MC4 se asocia con la corrección en la dirección física esperada, pero con una magnitud pequeña y
+frágil, y la información previa al Skinpass no la anticipa claramente mejor que una receta por producto. Antes de
+diferenciar recetas por producto, por lo tanto, proponemos validar con un experimento dentro de cada programa y
+registrar la planeza de salida.
+
+\paragraph{Contribución} Para Ternium, el artículo acota lo que una receta por producto podría absorber de la
+corrección del Skinpass y muestra que la mayor parte de esa corrección cambia de un programa o de un día a otro; además
+deja una unión verificada entre ambos molinos, reproducible con un solo comando. Para el campo, muestra cómo plantear
+una pregunta respondible cuando la pregunta original exige un resultado que la planta no mide, y cómo someter una
+asociación de planta a control negativo, multiverso y sensibilidad antes de traducirla en una decisión.
+
+\subsection{Experimento propuesto}
+\label{sec:experimento}
+Proponemos una operación evolutiva~\cite{box1957}: perturbaciones pequeñas, dentro del rango ya operado, que no
+detienen la producción.
+\begin{itemize}
+\item \emph{Qué se asigna.} Factor A: preset vigente frente a preset recentrado con la mediana histórica de la
+      corrección de su celda producto $\times$ dimensión, limitado al rango de preset ya usado en esa celda. Factor B,
+      sin costo adicional en un diseño factorial $2^2$: ajuste del preset por la corona relativa del MC4.
+\item \emph{Unidad y bloqueo.} El rollo, alternado dentro de cada programa del Skinpass en bloques permutados de cuatro
+      y estratificado por celda~\cite{box2005,montgomery2017}. Asignar por rollo y no por programa es la consecuencia
+      práctica de H1: bloquear por programa elimina de la comparación la fuente de variación más grande. Es viable porque
+      el preset ya cambia entre rollos de un mismo programa.
+\item \emph{Resultado y criterio de decisión, fijados antes.} Resultado primario: $|\Y|$ promedio, en kN. Se adopta el
+      recentrado si baja $|\Y|$ al menos \ExpDeltaA~kN con un intervalo que excluya cero y si ningún indicador
+      secundario empeora más que un margen de no inferioridad acordado con Ternium~\cite{wellek2010}. Indicadores
+      secundarios: defectos de inspector, rollos retenidos, elongación lograda, la cola (porcentaje de rollos con $|\Y|$
+      mayor que su percentil 90 histórico) y, si se instala, la planeza de salida.
+\item \emph{Volumen.} Con una desviación estándar de $|\Y|$ dentro de programa y celda de \ExpTodoSigmaDentro~kN, detectar
+      \ExpDeltaA~kN con 80\,\% de potencia y $\alpha=0.05$ requiere \ExpTodoARollos{} rollos, unas \ExpTodoASemRollo{}
+      semanas de producción del Skinpass (\ExpTodoRollosSemana{} rollos por semana). Asignar por programa requeriría
+      \ExpTodoAProg{} programas (unas \ExpTodoASemProg{} semanas). Limitado a la familia más grande
+      (\ExpFamilia, \ExpFamiliaRollos{} rollos al año), tomaría unas \ExpFamASemRollo{} semanas. Con ese volumen, el
+      factor B solo se detectaría si su efecto fuera de al menos \ExpMDEB~kN, el doble del estimado.
+\item \emph{Lo que el volumen revela.} Para probar lo que diferenciar por producto agrega al recentrado de la receta
+      única (\ExpDeltaDif~kN) harían falta \ExpTodoDifRollos{} rollos, más de una década de producción. Ese es un
+      hallazgo en sí mismo: con lo que hoy se mide, la diferenciación por producto no se puede validar
+      experimentalmente en un plazo razonable, y no es donde está la mayor parte de la corrección.
+\item \emph{Reglas de paro.} Revisión semanal por el ingeniero de proceso del Skinpass, que decide. Se detiene un
+      brazo si su tasa de defectos de inspector supera a la del otro en más de un punto porcentual dos semanas seguidas, o
+      si aparece un defecto de forma (fuera de planeza, ondulación, tableado) en rollos consecutivos del mismo brazo.
+\end{itemize}
+
+\subsection{Datos del Skinpass que harían respondible la pregunta original}
+\begin{enumerate}
+\item \emph{Planeza de salida} como medición continua a lo ancho, por rollo, con el tramo estable separado del enhebrado
+      y la aceleración. Sin ella no hay un resultado de forma que comparar entre recetas.
+\item \emph{Forma de entrada}, aunque sea una medición gruesa: es el principal confusor no medido del diagrama.
+\item \emph{Consigna y valor medido de cada palanca} (bending, elongación, fuerza, tensiones, velocidad) a lo largo del
+      rollo, y la \emph{lógica de los lazos}: qué actuador responde a qué medición. Sin esto no se distinguen las
+      palancas de los mediadores.
+\item \emph{Campaña de rodillos de trabajo} de cada rollo (fecha de montaje y toneladas acumuladas), el \emph{historial
+      de recetas} con fechas de vigencia y los \emph{ajustes del operador} con su motivo.
+\item \emph{El mismo identificador} que usa el MC4: con él ligamos el \PctCalienteEnSKP--\PctDecapadoEnSKP\,\% de los
+      rollos planeados para el Skinpass. Las señales de 2026 que recibimos durante la Entrega~I no coincidían con ningún
+      rollo de 2025, así que cualquier dato nuevo debe cubrir el mismo periodo que el registro del MC4.
+\end{enumerate}
+Una advertencia acompaña esta lista: mientras exista una receta por tipo de material, la variación de configuración
+dentro de cada producto será pequeña y en buena parte reactiva. Los registros históricos, aun completos, medirán bien
+cuánto difieren los productos en lo que llegan necesitando, pero la diferencia de respuesta, que es lo que justificaría
+una receta por producto, casi con seguridad exigirá un experimento diseñado en el Skinpass.
+
+En suma, es verdad que la corrección del Skinpass depende más del programa o del periodo que del producto, y poco de la
+forma con que el rollo sale del MC4. Sigue sin saberse si reducir esa corrección mejora la planeza y si algún producto
+responde distinto a la receta. Lo resolvería un experimento rollo a rollo dentro de cada programa, con la planeza de
+salida medida.
